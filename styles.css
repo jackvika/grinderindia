@@ -457,7 +457,7 @@ section {
 
 #contact {
     padding: 4em 0;
-    background: url('img/contact.jpeg') no-repeat center center;
+    background: url('contact.jpeg') no-repeat center center;
     background-size: cover;
     color: #FFFFFF; /* Text color to stand out on the background */
 }
