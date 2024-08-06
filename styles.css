@@ -1,0 +1,888 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333333;
+    overflow-x: hidden;
+}
+
+/* Navbar Styling */
+.navbar {
+    background: linear-gradient(90deg, #000000 0%, #333333 100%); /* Smooth gradient */
+    border-bottom: 3px solid #FF6600; /* Thicker accent color border */
+    padding: 15px 25px; /* Increased padding for a more spacious look */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.logo-img {
+    width: 200px; /* Adjust logo size for consistency */
+    height: auto;
+}
+
+.navbar-brand {
+    font-size: 1.5em; /* Slightly smaller font size for the brand */
+    font-weight: bold; /* Bold brand text */
+    color: #FF6600; /* Accent color for brand */
+    text-transform: uppercase; /* Uppercase for a professional look */
+    letter-spacing: 1px; /* Slight letter spacing */
+}
+
+.navbar-nav .nav-item {
+    margin-left: 20px; /* Increased space between menu items */
+}
+
+.navbar-nav .nav-link {
+    font-size: 1em; /* Standard font size */
+    color: #FFFFFF; /* White text color */
+    font-weight: 500; /* Medium font weight */
+    text-transform: uppercase; /* Uppercase text for uniformity */
+    transition: color 0.3s, border-bottom 0.3s, padding-bottom 0.3s; /* Smooth transition for hover effects */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #FF6600; /* Accent color on hover */
+    border-bottom: 3px solid #FF6600; /* Thicker underline effect on hover */
+    padding-bottom: 5px; /* Added space under text for visual effect */
+}
+
+.navbar-toggler {
+    border: none;
+    background-color: transparent; /* Remove default border */
+    outline: none; /* Remove outline */
+}
+
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"%3E%3Cpath stroke="%23FFFFFF" stroke-width="2" d="M5 7h20M5 15h20M5 23h20"/%3E%3C/svg%3E'); /* Custom toggle icon */
+}
+
+/* Responsive Navbar */
+@media (max-width: 992px) {
+    .navbar-nav {
+        text-align: center;
+        padding-top: 15px; /* Added padding for better spacing on mobile */
+    }
+
+    .navbar-nav .nav-item {
+        margin: 10px 0; /* Space between items on mobile */
+    }
+
+    .navbar-toggler-icon {
+        background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"%3E%3Cpath stroke="%23FFFFFF" stroke-width="2" d="M5 7h20M5 15h20M5 23h20"/%3E%3C/svg%3E'); /* Custom toggle icon for mobile */
+    }
+}
+
+
+/* Hero Section Styling */
+.hero-content {
+    padding: 100px 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('img/banner.jpeg') no-repeat center center; /* Background image with gradient overlay */
+    background-size: cover;
+    color: #FFFFFF;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.hero-content h1 {
+    font-size: 4em; /* Larger font size */
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Shadow for better readability */
+}
+
+.hero-content p {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    max-width: 80%; /* Limit text width */
+    text-align: center;
+    line-height: 1.5;
+}
+
+.hero-content .btn {
+    padding: 12px 24px; /* Larger button */
+    font-size: 1.2em;
+    border-radius: 25px; /* Rounded button */
+    background-color: #FF6600;
+    color: #FFFFFF;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Button shadow */
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.hero-content .btn:hover {
+    background-color: #E55B00;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Section Styling */
+section {
+    padding: 4em 2em; /* Increased padding for better spacing */
+    text-align: center;
+}
+
+#why {
+    padding: 5em 0;
+    background: #f0f4f8; /* Light greyish-blue background for a more professional feel */
+}
+
+#why h2 {
+    margin-bottom: 2.5em;
+    font-size: 2.8em;
+    color: #333;
+    text-align: center;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif; /* Modern, clean font */
+}
+
+.info-box {
+    background: #ffffff; /* White background for each box */
+    padding: 2em;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 2.5em; /* Increased space between rows */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* Ensures content stays within rounded corners */
+    position: relative;
+}
+
+.info-box:hover {
+    transform: translateY(-12px); /* Slightly lift the box on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* More pronounced shadow on hover */
+}
+
+.info-box h3 {
+    font-size: 1.6em;
+    color: #FF6600; /* Accent color */
+    margin-bottom: 0.75em;
+    font-family: 'Roboto', sans-serif; /* Consistent font */
+}
+
+.info-box p {
+    color: #555; /* Slightly darker grey for text */
+    font-family: 'Arial', sans-serif; /* Simple font for readability */
+}
+
+.info-icon {
+    font-size: 3em; /* Larger icons for better visibility */
+    color: #FF6600; /* Accent color */
+    margin-bottom: 1.5em;
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.info-box:hover .info-icon {
+    color: #e65c00; /* Slightly darker shade on hover */
+}
+
+.favicon-container {
+    text-align: center;
+    margin-top: 3em; /* Increased margin for better separation */
+}
+
+.favicon {
+    width: 40px; /* Slightly larger favicon */
+    height: auto;
+    animation: rotate 12s linear infinite; /* Slower rotation for subtle effect */
+}
+
+/* Animation for the favicon */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#solutions {
+    padding: 4em 1em; /* Increased padding for better spacing */
+    background: #f8f9fa; /* Light background color for contrast */
+}
+
+#solutions h2 {
+    margin-bottom: 2em;
+    font-size: 2.5em;
+    color: #333;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif; /* Modern font */
+}
+
+.solution-card {
+    background: #ffffff; /* White background for each card */
+    border: none;
+    border-radius: 12px; /* Slightly rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Increased shadow for depth */
+    overflow: hidden; /* Ensures no overflow of content */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    padding: 1.5em;
+    margin-bottom: 2em; /* Space below each card */
+}
+
+.solution-icon {
+    width: 150px; /* Larger image size */
+    height: 150px;
+    margin-bottom: 1.5em; /* More space below the image */
+    object-fit: cover; /* Cover to maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners for the image */
+}
+
+.solution-body {
+    padding: 1em;
+}
+
+.solution-title {
+    font-size: 1.6em;
+    color: #333;
+    margin-bottom: 0.5em;
+    font-family: 'Roboto', sans-serif; /* Consistent font */
+}
+
+.solution-description {
+    color: #666;
+    font-size: 1.1em;
+}
+
+/* Hover Effects */
+.solution-card:hover {
+    transform: translateY(-12px); /* Lift the card more on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .solution-card {
+        padding: 1em; /* Adjust padding on smaller screens */
+        margin-bottom: 1.5em; /* Adjust bottom margin on smaller screens */
+    }
+
+    .solution-icon {
+        width: 120px; /* Slightly smaller images on small screens */
+        height: 120px;
+    }
+}
+
+/* about */
+
+#about {
+    padding: 4em 1em; /* Enhanced padding for better spacing */
+    background-color: #f0f4f8; /* Light gray background for contrast */
+    color: #333333; /* Dark text color for readability */
+}
+
+#about h2 {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+    text-align: center;
+    color: #000000; /* Primary color for headings */
+    font-weight: bold; /* Bold heading text */
+    font-family: 'Roboto', sans-serif; /* Modern font */
+}
+
+/* Card Styling */
+.card {
+    border-radius: 15px; /* Rounded corners for a modern look */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Pronounced shadow for depth */
+    margin: 1em 0; /* Margin for vertical spacing */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    overflow: hidden; /* Ensure content does not overflow */
+    position: relative; /* For positioning the favicon */
+    background-color: #ffffff; /* White background for card body */
+}
+
+.card-img-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px; /* Set height for consistency */
+    background-color: #f0f4f8; /* Light gray background to match section */
+}
+
+.card-img-top i {
+    color: #FF6600; /* Accent color for the icons */
+    font-size: 3em; /* Ensure icons are prominent */
+}
+
+.card-body {
+    padding: 1.5em; /* Padding for content spacing */
+    text-align: center; /* Center align text */
+}
+
+.card-title {
+    font-size: 1.4em; /* Font size for title */
+    margin-top: 0.5em;
+    color: #FF6600; /* Accent color for the title */
+    font-weight: bold; /* Bold title text */
+    font-family: 'Roboto', sans-serif; /* Consistent font */
+}
+
+.card-text {
+    font-size: 1em;
+    color: #555555; /* Lighter color for text */
+    margin-top: 0.5em; /* Space between text and title */
+    font-family: 'Arial', sans-serif; /* Simple font for readability */
+}
+
+/* Hover Effect */
+.card:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Button Styling */
+.btn-primary {
+    background-color: #FF6600; /* Accent color for the button */
+    color: #FFFFFF; /* White text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners for button */
+    padding: 0.5em 1em; /* Padding for button */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Make the button inline with text */
+    font-size: 1em; /* Button text size */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+.btn-primary:hover {
+    background-color: #e65c00; /* Darker shade for hover effect */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Products Section */
+#our-products {
+    padding: 4em 1em; /* Enhanced padding for spacing */
+    background-color: #ffffff; /* Light background for contrast */
+    color: #333333; /* Dark text color for readability */
+}
+
+#our-products h2 {
+    font-size: 2.5em;
+    margin-bottom: 1.5em;
+    text-align: center;
+    color: #000000; /* Primary color for headings */
+    font-weight: bold; /* Bold heading text */
+}
+
+/* Card Styling */
+.product-card {
+    border-radius: 15px; /* Rounded corners for modern look */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Pronounced shadow for depth */
+    margin: 1em 0; /* Margin for vertical spacing */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    overflow: hidden; /* Ensure image does not overflow */
+}
+
+.product-card-title {
+    font-size: 1.4em; /* Adjusted title size */
+    margin-top: 0.5em;
+    color: #FF6600; /* Accent color for title */
+    font-weight: bold; /* Bold title text */
+}
+
+.product-card-img {
+    border-radius: 15px 15px 0 0; /* Rounded top corners for image */
+    height: 400px;
+    object-fit: cover; /* Maintain aspect ratio */
+    transition: transform 0.3s ease; /* Smooth transition effect */
+}
+
+.product-card-body {
+    padding: 1.5em; /* Padding for content spacing */
+    background-color: #FFFFFF; /* White background for card body */
+    text-align: center; /* Center align text */
+}
+
+.product-card-text {
+    font-size: 1em;
+    color: #555555; /* Lighter text color */
+    margin-top: 0.5em; /* Space between text and title */
+}
+
+/* Button Styling */
+.btn-primary {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #FF6600; /* Accent color for the button */
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #e55a00; /* Darker shade on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Hover Effect */
+.product-card:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+
+#contact {
+    padding: 4em 0;
+    background: url('img/contact.jpeg') no-repeat center center;
+    background-size: cover;
+    color: #FFFFFF; /* Text color to stand out on the background */
+}
+
+#contact h2 {
+    margin-bottom: 2em;
+    font-size: 2.8em; /* Larger font size for prominence */
+    color: #FFFFFF; /* White text color for contrast */
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Subtle shadow for readability */
+}
+
+.form-container {
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    padding: 2.5em;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
+    margin-top: 1em;
+}
+
+.form-group {
+    margin-bottom: 1.5em;
+}
+
+.form-control {
+    border-radius: 8px;
+    padding: 15px;
+    border: 1px solid #CCCCCC;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-control:focus {
+    border-color: #FF6600;
+    box-shadow: 0 0 5px rgba(255, 102, 0, 0.5);
+}
+
+.form-container form button.btn {
+    padding: 12px 24px;
+    font-size: 1.1em;
+    color: #ffffff; /* Text color */
+    background-color: #007bff; /* Base button color */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.form-container form button.btn:hover {
+    background-color: #0056b3; /* Hover color */
+}
+
+.map-container {
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    padding: 2.5em;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
+    margin-top: 1em;
+}
+
+.map-container h3 {
+    margin-bottom: 1em;
+    font-size: 1.8em; /* Slightly larger font size for heading */
+    color: #333; /* Darker color for better readability */
+    text-align: center;
+}
+
+iframe {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+footer {
+    background: linear-gradient(135deg, #1c1c1c, #333333); /* Gradient background for a modern look */
+    color: #FFFFFF;
+    padding: 2em 0; /* Added more padding for a spacious feel */
+    text-align: center;
+    position: relative; /* For positioning the footer link */
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em; /* Smaller font size for the text */
+    color: #dddddd; /* Light grey color for text */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 25px; /* Space between icons */
+    margin: 1em 0; /* Space above and below the icons */
+}
+
+.social-icons a {
+    color: #FFFFFF; /* Default icon color */
+    font-size: 2em; /* Larger icon size */
+    transition: transform 0.3s, color 0.3s, background-color 0.3s; /* Smooth transitions */
+    display: flex; /* Center icon vertically */
+    align-items: center;
+    justify-content: center;
+    width: 50px; /* Fixed width */
+    height: 50px; /* Fixed height */
+    border-radius: 50%; /* Circular background */
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle background */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.social-icons a:hover {
+    color: #FF6600; /* Change icon color on hover */
+    transform: scale(1.2); /* Slightly enlarge on hover */
+    background-color: rgba(255, 255, 255, 0.2); /* Slightly darker background */
+}
+
+.footer-link {
+    margin-top: 1em;
+    font-size: 0.9em; /* Slightly smaller font size */
+    color: #dddddd; /* Light grey color for the link text */
+}
+
+.footer-link a {
+    color: #FF6600; /* Orange color for the link */
+    text-decoration: none;
+    font-weight: bold; /* Bold link text */
+    transition: color 0.3s, text-decoration 0.3s; /* Smooth transitions */
+}
+
+.footer-link a:hover {
+    color: #E55B00; /* Darker orange on hover */
+    text-decoration: underline; /* Underline on hover for emphasis */
+}
+
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: #FF6600;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    transition: opacity 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.scroll-to-top.visible {
+    display: block;
+    opacity: 1;
+}
+
+.scroll-to-top:hover {
+    background-color: #E55B00;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2em;
+    }
+
+    .hero-content p {
+        font-size: 1em;
+    }
+
+    .hero-content .btn {
+        font-size: 0.9em;
+    }
+
+    .card {
+        margin: 0.5em;
+    }
+}
+
+/* Header Styling */
+header.product-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/Plastic-Recycling-Machine-Manufacturer-in-India.png') no-repeat center center/cover;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    padding: 5rem 0; /* Adds spacing around content */
+    text-align: center; /* Center-aligns text */
+}
+
+/* Header Content */
+header .header-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* Header Title */
+header .display-4 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem; /* Adds space below the title */
+}
+
+/* Lead Paragraph */
+header .lead {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+/* Product Feature */
+.product-feature {
+    border-radius: 12px; /* Rounded corners for a softer look */
+    padding: 2rem;
+    margin: 2rem auto; /* Center-align and add spacing */
+    max-width: 600px;
+}
+
+/* Product Feature Image */
+.product-feature img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Rounded corners */
+    margin: 0 auto; /* Center-align the image */
+}
+
+/* Product Buttons */
+.product-buttons .btn {
+    background-color: #FF6600;
+    color: #fff;
+    border-radius: 8px;
+    padding: 0.75rem 2rem;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
+    text-decoration: none; /* Remove underline from links */
+}
+
+.product-buttons .btn:hover {
+    background-color: #e55a00;
+    transform: translateY(-2px);
+}
+
+/* Product Feature Image */
+.product-feature img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Rounded corners for a polished look */
+    margin: 0 auto; /* Center-align the image */
+    background-color: #fff; /* Ensures a white background behind the image if needed */
+    padding: 1rem; /* Adds some padding around the image */
+}
+
+
+
+
+/* Product Tabs Section */
+#product-info {
+    background-color: #f8f9fa; /* Light grey background for the section */
+    padding: 4rem 0; /* Extra padding for spacious look */
+}
+
+#product-info .container {
+    max-width: 1200px; /* Restricting width for better content alignment */
+}
+
+#product-info h2 {
+    font-size: 2.5rem; /* Larger font size for the heading */
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #333;
+    position: relative;
+}
+
+/* Tab Navigation */
+.bar-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #ddd; /* Bottom border for the tab bar */
+}
+
+.bar-item {
+    margin-right: 0.5rem;
+}
+
+.bar-link {
+    display: inline-block;
+    border: 1px solid #ddd;
+    border-radius: 8px 8px 0 0; /* Rounded corners on top */
+    padding: 0.75rem 1.5rem;
+    color: #333;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    background-color: #fff; /* Default background for inactive tabs */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.bar-link.active {
+    background-color: #FF6600;
+    color: #fff;
+    border-color: #FF6600;
+    z-index: 1; /* Ensures active tab is on top */
+}
+
+.bar-link:hover {
+    background-color: #e65c00; /* Slightly darker orange on hover */
+    color: #fff;
+}
+
+/* Tab Content */
+/* Tab Content Styling */
+.tab-content .tab-pane {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    animation: fadeIn 0.5s ease-in-out;
+    transition: box-shadow 0.3s ease;
+}
+
+.tab-content .tab-pane:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* List Styling */
+.list-unstyled {
+    padding: 0;
+    margin: 0;
+}
+
+.list-unstyled li {
+    background-color: #f7f7f7;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin: 0.5rem 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.list-unstyled li:hover {
+    background-color: #ffffff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Table Styling */
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f9f9f9;
+}
+
+.table-striped tbody tr:nth-of-type(even) {
+    background-color: #fff;
+}
+
+.table thead th {
+    background-color: #FF6600;
+    color: #fff;
+    border: none;
+    font-weight: 700;
+}
+
+/* Video List */
+.video-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.video-item {
+    display: block;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    width: calc(50% - 0.5rem); /* Adjust width based on the number of items */
+    max-width: 500px; /* Optional: Set a max-width for larger screens */
+}
+
+.video-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+.video-thumbnail img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.video-title {
+    padding: 1rem;
+    background-color: #f8f9fa;
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+    border-top: 1px solid #ddd;
+}
+
+.btn-link {
+    display: block;
+    background-color: #FF6600;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-link:hover {
+    background-color: #e65c00; /* Darker orange on hover */
+}
+
+/* Animation for fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
